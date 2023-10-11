@@ -1734,6 +1734,15 @@ li {
   max-width: 1600px !important;
 }
 
+.project_footer {
+  border-top: 1px solid var(--global--opacity-black-20);
+  margin-top: 50px;
+  padding-top: 25px;
+}
+.project_footer .container {
+  flex-flow: column wrap;
+}
+
 @media (min-width: 768px) {
   .ipad-clear {
     clear: both;
