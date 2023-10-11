@@ -1,0 +1,23 @@
+@import "assets/scss/settings/file-header";
+@import "assets/scss/settings/global";
+
+// Helpers
+@import "assets/scss/helpers/variables";
+@import "assets/scss/helpers/media-queries";
+@import "assets/scss/helpers/flexbox";
+@import "assets/scss/helpers/mixins";
+
+// Plugins and Single events
+@import "assets/scss/components/modal";
+@import "assets/scss/components/plugins";
+@import "assets/scss/components/slick-slider";
+
+// Default HTML & Body Settings
+@import "assets/scss/layout/reset";
+
+// Project Styles
+@import "assets/scss/pages/common-styles";
+@import "assets/scss/pages/header";
+@import "assets/scss/pages/home";
+@import "assets/scss/pages/footer";
+@import "assets/scss/pages/mediaqueries";
