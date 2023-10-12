@@ -1,0 +1,8 @@
+.project_footer {
+  border-top: 1px solid var(--global--opacity-black-20);
+  margin-top: 50px;
+  padding-top: 25px;
+  .container {
+    flex-flow: column wrap;
+  }
+}

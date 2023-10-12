@@ -5,17 +5,15 @@
   }
   .sec_title {
     @include align-items(center);
-    background-color: var(--global--color-primary);
-    color: var(--global--color-white);
+    background-color: transparent;
+    color: var(--global--color-black);
     @include flexbox-display(inline-flex);
-    @include fontSize(20px);
-    font-weight: $fw-300;
-    height: 60px;
+    @include fontSize(24px);
+    font-weight: $fw-700;
     line-height: 1;
     @include justify-content(center);
     margin: 10px auto 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-transform: uppercase;
   }
   .nav {
     left: 50%;
@@ -120,6 +118,21 @@
 }
 .lb-container {
   .lb-image {
-    max-width: 1600px !important;
+    max-width: 300px !important;
+    @include min(575) {
+      max-width: 500px !important;
+    }
+    @include min(768) {
+      max-width: 700px !important;
+    }
+    @include min(991) {
+      max-width: 900px !important;
+    }
+    @include min(1200) {
+      max-width: 1150px !important;
+    }
+    @include min(1650) {
+      max-width: 1600px !important;
+    }
   }
 }
