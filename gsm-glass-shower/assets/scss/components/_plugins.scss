@@ -1,0 +1,111 @@
+//Easy Responsive Tabs
+.resp-tabs-list li {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+.resp-tabs-container {
+  padding: 0px;
+  clear: left;
+}
+h2.resp-accordion {
+  cursor: pointer;
+  display: none;
+}
+.resp-tab-content {
+  display: none;
+}
+.resp-tab-active {
+  margin-bottom: -1px !important;
+}
+.resp-content-active,
+.resp-accordion-active {
+  display: block;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+  float: left;
+  width: 30%;
+}
+.resp-vtabs .resp-tabs-list li {
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  float: none;
+}
+.resp-vtabs .resp-tabs-container {
+  padding: 0px;
+  background-color: #fff;
+  float: left;
+  width: 68%;
+  min-height: 250px;
+  border-radius: 4px;
+  clear: none;
+}
+.resp-vtabs .resp-tab-content {
+  border: none;
+}
+.resp-vtabs li.resp-tab-active {
+  position: relative;
+  z-index: 1;
+  margin-right: -1px !important;
+}
+.resp-arrow {
+  @include flex-align(vhCenter);
+  cursor: pointer;
+  height: 30px;
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  transform-origin: center center;
+  @include rotate(-225deg);
+  top: 6px;
+  width: 30px;
+  &:before {
+    border-right: 1px solid var(--global--color-black);
+    border-top: 1px solid var(--global--color-black);
+    content: '';
+    height: 10px;
+    width: 10px;
+  }
+}
+h2.resp-tab-active span.resp-arrow {
+  @include rotate(-45deg);
+  top: 12px;
+}
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+  background: var(--global--color-primary);
+}
+.resp-easy-accordion h2.resp-accordion {
+  display: block;
+}
+.resp-jfit {
+  width: 100%;
+  margin: 0px;
+}
+.resp-tab-content-active {
+  display: block;
+}
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@include max(991) {
+  ul.resp-tabs-list {
+    display: none;
+  }
+  h2.resp-accordion {
+    display: block;
+    margin-top: 10px;
+    position: relative;
+  }
+  .resp-vtabs .resp-tabs-container {
+    border: none;
+    float: none;
+    width: 100%;
+    min-height: initial;
+    clear: none;
+  }
+  .resp-accordion-closed {
+    display: none !important;
+  }
+}

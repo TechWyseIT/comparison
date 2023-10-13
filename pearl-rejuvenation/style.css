@@ -1296,6 +1296,11 @@ picture:after {
   }
 }
 
+.tw-col-6 {
+  flex: 0 0 50%;
+  width: 50%;
+}
+
 .curP {
   cursor: pointer;
 }

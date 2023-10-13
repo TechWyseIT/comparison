@@ -1,0 +1,119 @@
+.tw-modal-wrapper {
+  background-color: rgba(#000, 0.8);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 15px;
+  top: 0;
+  @include scale(0, 0);
+  @include transition(all, ease, 0.3s);
+  width: 100vw;
+  z-index: 9999;
+  .modal-close-wrapper {
+    background-color: transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .tw-modal-container {
+    background-color: var(--global--color-white);
+    @include border-radius(6px);
+    @include box-shadow(0, 2px, 20px, rgba($black, 0.2));
+    padding: 25px;
+    position: relative;
+    z-index: 3;
+  }
+  .tw-modal-close-button {
+    background-color: $black;
+    border-top-right-radius: 6px;
+    color: var(--global--color-white);
+    @include flex-align(vhCenter);
+    @include fontSize(18px);
+    font-weight: $fw-300;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    &:hover {
+      background-color: var(--global--color-black);
+    }
+  }
+  .tw-modal-header {
+    color: var(--global--color-secondary);
+    @include fontSize(20px);
+    font-weight: $fw-600;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .tw-modal-body {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+  &.modal-xxl {
+    .tw-modal-container {
+      max-width: 1400px;
+      padding: 10px;
+    }
+    .tw-modal-body {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+  &.modal-lg {
+    .tw-modal-container {
+      max-width: 900px;
+    }
+  }
+  &.modal-md {
+    .tw-modal-container {
+      max-width: 600px;
+    }
+  }
+  &.showed {
+    opacity: 1;
+    @include scale(1, 1);
+  }
+  @include min(768) {
+    .tw-modal-container {
+      padding: 40px;
+    }
+    .tw-modal-close-button {
+      height: 36px;
+      width: 36px;
+    }
+    .tw-modal-header {
+      @include fontSize(26px);
+    }
+    .tw-modal-body {
+      margin-top: 12px;
+      padding-top: 15px;
+    }
+  }
+  @include min(1200) {
+    .tw-modal-header {
+      @include fontSize(30px);
+    }
+  }
+  @include min(1600) {
+    .tw-modal-header {
+      @include fontSize(32px);
+    }
+  }
+}
+.tw-modal-wrapper {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+  &.showed {
+    display: flex;
+  }
+}
