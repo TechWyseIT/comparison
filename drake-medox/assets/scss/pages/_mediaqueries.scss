@@ -14,6 +14,14 @@
     @include flex(0,0,50%);
     width: 50%;
   }
+  .slick-arrow {
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    svg {
+      height: 30px;
+    }
+  }
 }
 // Min-width 768
 @include min(992) {
@@ -102,6 +110,17 @@
 }
 // Max-width 991
 @include max(767) {
+  .project_header {
+    .logo {
+      max-height: 60px;
+      img {
+        max-width: 220px;
+      }
+      svg {
+        width: 220px;
+      }
+    }
+  }
 }
 // Max-width 767
 @include max(574) {
